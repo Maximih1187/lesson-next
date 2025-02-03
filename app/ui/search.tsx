@@ -6,11 +6,11 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 export default function Search({ placeholder }: { placeholder: string }) {
 
 
-
   const searchParams = useSearchParams();
   //useSearchParams создает строку запроса ('query=')
 
   const pathname = usePathname();
+
   //"usePathname" показывает фактический адрес страницы ('/dashboard/invoices')
 
   const { replace } = useRouter();

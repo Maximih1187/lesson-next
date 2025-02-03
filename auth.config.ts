@@ -12,9 +12,9 @@ export const authConfig = {
       if (isOnDashboard) {
         if (isLoggedIn) return true;
 
-        return false; // Перенаправлять не прошедших проверку пользователей на страницу входа в систему
+        return false;
+        // Перенаправлять не прошедших проверку пользователей на страницу входа в систему
       } else if (isLoggedIn) {
-        console.log("object");
         return Response.redirect(new URL("/dashboard", nextUrl));
       }
       return true;
